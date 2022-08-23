@@ -27,9 +27,9 @@ export default function Tarefas() {
             </div>
             <ul>
                 {lista.map(item => 
-                    
-                        <ItemTarefa item={item} removerTarefas={removerTarefas}/>
-                   
+                        <ItemTarefa
+                            item={item}
+                            removerTarefas={removerTarefas}/>
                     )}
             </ul>
         </section>
