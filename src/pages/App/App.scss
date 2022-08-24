@@ -1,4 +1,55 @@
 
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  #4D2480;
+}
+
+nav {
+    height:100hv;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ffff;
+}
+
+a:hover:after {
+    width: 100%;
+}
+
 
 .container2{
     margin: 0;

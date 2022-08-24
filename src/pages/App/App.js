@@ -16,6 +16,15 @@ function App() {
   return (
     <section>
 
+      <div>
+      <nav >
+               <a href='#INICIO'> INICIO </a>
+               <a href='# EM CARTAZ'> EM CARTAZ </a>
+               <a href='#EM BREVE'> EM BREVE </a>
+               <a href='#SNACK BAR'> SNACK BAR </a>
+       </nav>
+      </div>
+
       <div className='container2'>
       <div class="slider">
         <div class="slides">
