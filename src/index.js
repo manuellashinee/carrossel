@@ -12,7 +12,7 @@ import LinhaMagica from './pages/linhaMagica';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <LinhaMagica/>
    
   </React.StrictMode>
 );
