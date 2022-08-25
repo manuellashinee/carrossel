@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color:  #4D2480;
+    background-color:  #fff;
 }
 
 nav {
@@ -25,7 +25,7 @@ a{
     position: relative;
     text-decoration: none;
     font-family: sans-serif;
-    color: #fff;
+    color: #4D2480;
     font-size: 18px;
     letter-spacing: 0.5px;
     padding: 0 10px;
@@ -34,7 +34,7 @@ a{
 a:after {
     content: "";
     position: absolute;
-    background-color: #fff;
+    background-color: #4D2480;
     height: 3px;
     width: 0;
     left: 0;
@@ -43,7 +43,7 @@ a:after {
 }
 
 a:hover {
-    color: #ffff;
+    color: #4D2480;
 }
 
 a:hover:after {
@@ -58,7 +58,7 @@ a:hover:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #4D2480;
+    background: #fff;
 }
 
 .slider {
