@@ -1,62 +1,129 @@
-import { tns } from 'tiny-slider'
+import {useEffect} from 'react'
 import './index.scss'
 
 export default function LinhaMagica() {
-    let slider = tns({
-        container : ".my-slider",
-        "slideBy": 1,
-        "speed":400,
-        "nav": false,
-        controlsContainer:".controls",
-        prevButton : ".previous",
-        nextButton : ".next",
-        responsive : {
-            1240 : {
-                items : 3,
-                gutter: 20
-            }
-        }
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
     })
 
-    return(
-        <section id ="slider">
-            <div className='container'>
-                <div className='subcontainer'>
-                    <div className='slider-wrapper'>
-                        <div className='controller'>
-                            <div>
-                                <h3>OS MELHORES PREÇOS</h3>
-                                <h1>
-                                    VOCÊ ENCONTRA AQUI 
-                                </h1>
-                            </div>
-                            <div id='controls'>
-                                <button className='previous'><i className='fa-solid fa-angles-left'></i></button>
-                                <button className='next'><i className='fa-solid fa-angles-right'></i></button>
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
 
-                            </div>
-                        </div>
-                        <div className='my-slider'>
-                         <div>
-                           <div className='slide'>
-                               <div className='slide-img img-1'></div> 
-                            </div>
-                         </div>   
-                         <div>
-                           <div className='slide'>
-                               <div className='slide-img img-2'></div> 
-                            </div>
-                         </div>   
-                         <div>
-                           <div className='slide'>
-                               <div className='slide-img img-3'></div> 
-                            </div>
-                         </div>    
-                         </div>
-                    </div>
+    return(
+        <section className='LinhaM'>
+        <section className="product"> 
+        <h2 className="product-category">OS MELHORES PREÇOS VOCÊ ENCONTRA AQUI</h2>
+        <h1 className="product-category"></h1>
+        <button className="pre-btn"><img className='lana' src="../images/arrow.png" alt=""/></button>
+        <button className="nxt-btn"><img className='lana' src="../images/arrow.png" alt=""/></button>
+        <div className="product-container">
+            <div className="product-card">
+                <div className="product-image">
+                    
+                    <img src="../images/buzz.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
                 </div>
             </div>
-           
-        </section>
+            <div className="product-card">
+                <div className="product-image">
+                   
+                    <img src="../images/mundo.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    
+                    <img src="../images/raya.webp" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <p className="product-short-description">a short line about the cloth..</p>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <p className="product-short-description">a short line about the cloth..</p>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+            <div className="product-card">
+                <div className="product-image">
+                    <img src="../images/red.jpg" className="product-thumb" alt=""/>
+                </div>
+                <div className="product-info">
+                    <h2 className="product-brand">brand</h2>
+                    <span className="price">$20</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
     )
 }
