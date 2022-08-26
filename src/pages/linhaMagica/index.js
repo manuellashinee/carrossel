@@ -90,7 +90,6 @@ productContainers.forEach((item, i) => {
                 </div>
                 <div className="product-info">
                     <h2 className="product-brand">brand</h2>
-                    <p className="product-short-description">a short line about the cloth..</p>
                     <span className="price">$20</span>
                 </div>
             </div>
@@ -100,7 +99,6 @@ productContainers.forEach((item, i) => {
                 </div>
                 <div className="product-info">
                     <h2 className="product-brand">brand</h2>
-                    <p className="product-short-description">a short line about the cloth..</p>
                     <span className="price">$20</span>
                 </div>
             </div>
