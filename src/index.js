@@ -9,11 +9,12 @@ import Renderizacao from './pages/Renderizacao';
 import SituacaoAluno from './pages/SituacaoAluno';
 import LinhaMagica from './pages/multi1';
 import Multi2 from './pages/multi2';
+import Rotator from './pages/Rotator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Multi2/>
+    <Rotator/>
    
   </React.StrictMode>
 );
